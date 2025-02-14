@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: left;
+  color: #4D4D4C;
+}
+
+#taskCreation {
+  width: 300px;
+  height: 100px;
+  background-color: #E2F0CB;
+}
+
+#taskManagement {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  align-items: left;
+  background-color:#e0dae3;
+  background-color:white;
+}
+
+.taskBox {
+  width:80px;
+  height: 80px;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  background-color:#FFB7B2;
+}
+
+.deleteBox {
+  text-align: right;
+  color: white;
+}
