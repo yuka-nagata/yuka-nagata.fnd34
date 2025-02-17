@@ -3,22 +3,15 @@
 const taskKey = "taskList"
 let taskList = window.localStorage.getItem(taskKey);
 let taskArray = [];
+const managementBox = document.getElementById("taskManagement");
 
 // ローカルストレージに保存されたタスクリストの文字列を、配列に戻す
 if (taskList !== undefined || taskList !== null) {
   taskArray = JSON.parse(taskList);
-} else {
-  taskList = "";
-}
-
-const managementBox = document.getElementById("taskManagement");
-
-// ローカルストレージに保存されたタスクの箱を表示させる
-if (taskArray.length > 0) {
   for (const task of taskArray) {
     createBox(managementBox, task);
   }
-}
+} 
 
 /**
  * 入力された文字を表記したタスクの箱を作成し、ローカルストレージに保存する
