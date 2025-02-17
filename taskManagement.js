@@ -5,8 +5,10 @@ let taskList = window.localStorage.getItem(taskKey);
 let taskArray = [];
 
 // ローカルストレージに保存されたタスクリストの文字列を、配列に戻す
-if (taskList !== undefined) {
+if (taskList !== undefined || taskList !== null) {
   taskArray = JSON.parse(taskList);
+} else {
+  taskList = "";
 }
 
 const managementBox = document.getElementById("taskManagement");
