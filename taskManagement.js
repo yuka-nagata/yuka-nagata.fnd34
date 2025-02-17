@@ -14,8 +14,10 @@ if (taskList !== undefined || taskList !== null) {
 const managementBox = document.getElementById("taskManagement");
 
 // ローカルストレージに保存されたタスクの箱を表示させる
-for (const task of taskArray) {
-createBox(managementBox, task);
+if (taskArray.length > 0) {
+  for (const task of taskArray) {
+    createBox(managementBox, task);
+  }
 }
 
 /**
